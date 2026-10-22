@@ -1,0 +1,19 @@
+.card {
+  display: inline-block;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid color-mix(in oklab, #ededed, black 3%);
+  transition: all 0.3s;
+  border-radius: 0.6rem;
+}
+
+.card-is-raised {
+  box-shadow: -1px 3px 10px 0 rgb(0 0 0 / 6%);
+}
+.card-is-r {
+  border-radius: 1rem;
+}
+.card-is-s {
+  border-radius: 1.6rem;
+}

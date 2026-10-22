@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" type="module" defer></script>
+    <script src="/utils/helpers.js" type="module" defer></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Funny Counter home">
+          <span class="brand-icon" aria-hidden="true">✳</span>
+          <span>funny<span class="brand-accent">counter</span></span>
+        </a>
+        <span class="level-badge">
+          <span class="status-dot"></span>
+          Level 2 · Explorer
+        </span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">YOUR LEARNING PLAYGROUND</p>
+        <h1>Numbers are more fun <span>together.</span></h1>
+        <p class="subtitle">
+          Count, explore, and complete little challenges. Every number gets you
+          one step closer!
+        </p>
+      </section>
+
+      <section class="stats" aria-label="Your progress">
+        <article class="stat-card">
+          <span class="stat-icon purple">✦</span>
+          <div>
+            <p class="stat-label">TOTAL POINTS</p>
+            <p class="stat-value" id="score">0</p>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon orange">♨</span>
+          <div>
+            <p class="stat-label">WIN STREAK</p>
+            <p class="stat-value" id="streak">0 <small>in a row</small></p>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon green">✓</span>
+          <div>
+            <p class="stat-label">COMPLETED</p>
+            <p class="stat-value" id="completed">0</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <article class="panel counter-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE NUMBER MACHINE</p>
+              <h2>Your counter</h2>
+            </div>
+            <span class="round-icon" aria-hidden="true">↕</span>
+          </div>
+
+          <p class="helper-text">Use the buttons to change your number.</p>
+
+          <div class="number-display" id="numberDisplay">
+            <span id="count" aria-live="polite" aria-atomic="true">0</span>
+          </div>
+
+          <div class="counter-buttons">
+            <button
+              class="btn btn-secondary"
+              id="decreaseBtn"
+              type="button"
+              aria-label="Decrease number"
+            >
+              − <span>Minus</span>
+            </button>
+
+            <button
+              class="btn btn-primary"
+              id="increaseBtn"
+              type="button"
+              aria-label="Increase number"
+            >
+              + <span>Plus</span>
+            </button>
+          </div>
+
+          <div class="counter-footer">
+            <span>MIN 0 <span class="footer-separator">·</span> MAX 100</span>
+            <button class="text-button" id="resetBtn" type="button">
+              ↺ Reset counter
+            </button>
+          </div>
+
+          <p class="feedback" id="counterFeedback" role="status">
+            Ready when you are. Let's count!
+          </p>
+        </article>
+
+        <article class="panel challenge-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A LITTLE BRAIN WORK</p>
+              <h2>Today's challenge</h2>
+            </div>
+            <span class="challenge-tag">+10 POINTS</span>
+          </div>
+
+          <div class="challenge-banner">
+            <span class="challenge-emoji" aria-hidden="true">🎯</span>
+            <div>
+              <h3>Can you hit the target?</h3>
+              <p>Adjust your counter to match the magic number.</p>
+            </div>
+          </div>
+
+          <div class="target-area">
+            <p class="target-label">YOUR TARGET NUMBER</p>
+            <div class="target-number" id="targetNumber">42</div>
+            <p class="target-hint" id="targetHint">
+              Start counting to reach your goal.
+            </p>
+          </div>
+
+          <div class="progress-heading">
+            <span>Your progress</span>
+            <span id="progressText">0% there</span>
+          </div>
+
+          <div
+            class="progress-track"
+            id="progressTrack"
+            role="progressbar"
+            aria-label="Challenge progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <button class="btn btn-dark check-button" id="checkBtn" type="button">
+            Check my answer <span aria-hidden="true">→</span>
+          </button>
+
+          <p
+            class="feedback challenge-feedback"
+            id="challengeFeedback"
+            role="status"
+            aria-live="polite"
+          >
+            You've got this! Every try is practice.
+          </p>
+
+          <button
+            class="text-button new-challenge"
+            id="newChallengeBtn"
+            type="button"
+          >
+            ↻ Get a new challenge
+          </button>
+        </article>
+      </section>
+
+      <section class="tip-card">
+        <span class="tip-icon" aria-hidden="true">💡</span>
+        <div>
+          <h3>Little tip, big learning</h3>
+          <p>
+            Counting up means adding one. Counting down means taking one away.
+            Keep experimenting to discover how numbers work!
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Made for curious minds <span aria-hidden="true">♥</span></span>
+        <span>Learn a little. Laugh a little. Grow a lot.</span>
+      </footer>
+    </main>
+
+    <div class="celebration" id="celebration" aria-hidden="true"></div>
+  </body>
+</html>
